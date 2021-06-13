@@ -16,7 +16,7 @@ def usage():
 # my  API key is hUYXm28xTuq1x7qLoLuKwA
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv,"z:t:b:l:r:o:x:m",["zoom=","top=","bottom=","left=","right=","ofile=","max=","min="])
+        opts, args = getopt.getopt(argv,"z:t:b:l:r:o:x:m:",["zoom=","top=","bottom=","left=","right=","ofile=","max=","min="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -49,7 +49,7 @@ def main(argv):
         elif opt == "-o":
             myFile = arg
 
-    if ((myZoom == '') or (myTop == '') or (myBottom == '') or (myLeft == '') or (myright == '') or (myMax == '') or (myMin == '') or (myFile == '')):
+    if ((myZoom == '') or (myTop == '') or (myBottom == '') or (myLeft == '') or (myRight == '') or (myMax == '') or (myMin == '') or (myFile == '')):
         usage()
         sys.exit(2)        
 
@@ -89,7 +89,7 @@ def main(argv):
 
         _x = _x + 1
         x = x + 1
-        if (x >= maxX)
+        if (x >= maxX):
             x = x - maxX
 
     resultImage = arrayToImage(arr)
