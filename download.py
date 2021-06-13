@@ -93,6 +93,7 @@ def main(argv):
             x = x - maxX
 
     resultImage = arrayToImage(arr)
+    resultImage.save(myFile)
     resultImage.show()
 
   
