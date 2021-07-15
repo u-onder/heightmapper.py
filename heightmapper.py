@@ -94,7 +94,7 @@ def main(argv):
 
     resultImage = arrayToImage(arr)
     resultImage.save(myFile)
-    resultImage.show()
+    print("done...")
 
   
 def getXTerm(zoom, longitude):
@@ -146,7 +146,7 @@ def processImage(image, lowThreshold, heighThreshold):
     arr4 = arr4/delta
     arr5 = arr4.reshape((256,256))
 
-    return np.uint16(arr5*65535)
+    return np.uint16(arr5*32768 + 32767)
 
 def arrayToImage(arr):
     image = Image.fromarray(arr)
